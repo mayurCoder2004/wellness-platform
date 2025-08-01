@@ -1,0 +1,19 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient rectangle -->
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3B82F6" /> <!-- from-blue-500 -->
+      <stop offset="100%" stop-color="#8B5CF6" /> <!-- to-purple-600 -->
+    </linearGradient>
+  </defs>
+  <rect width="40" height="40" rx="10" fill="url(#gradient)" />
+  
+  <!-- Lucide Activity icon (stroke path) -->
+  <path
+    d="M4 20H10L14 10L18 30L22 20H26L30 26H36"
+    stroke="white"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
