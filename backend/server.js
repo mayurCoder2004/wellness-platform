@@ -1,7 +1,9 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import connectDB from './config/db';
+import connectDB from './config/db.js';
+import authRoutes from './routes/authRoutes.js';
+import sessionRoutes from './routes/sessionRoutes.js';
 
 dotenv.config();
 
@@ -14,9 +16,9 @@ const PORT = process.env.PORT || 5000;
 // MongoDB connection
 connectDB();
 
-// Routes (to be added later)
-// import authRoutes from './routes/authRoutes.js';
-// app.use('/api/auth', authRoutes);
+// Routes
+app.use('/api/auth', authRoutes);
+app.use('/api', sessionRoutes);
 
 app.get('/', (req, res) => {
   res.send('API is running...');
